@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+echo '';
+echo 'hello', PHP_EOL;
+
+$birthDate = '1980-09-05';
+$todayDate = date('Y-m-d');
+
+$birthTime = strtotime($birthDate);
+$todayTime = strtotime($todayDate);
+
+$totalSecs = $todayTime - $birthTime;
+$totalDays = floor($totalSecs / 3600 / 24);
+
+echo '', PHP_EOL;
+echo "$birthDate : $totalDays", PHP_EOL;
