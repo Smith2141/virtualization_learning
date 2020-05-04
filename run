@@ -1,17 +1,14 @@
 #!/usr/bin/env php
 <?php
+
+include './src/Dates/BirthDays.php';
 $opts = getopt("b:");
 
+
 echo PHP_EOL, 'start the script', PHP_EOL;
-
 $birthDate = $opts["b"] ?? '1980-05-04';
-$todayDate = date('Y-m-d');
 
-$birthTime = strtotime($birthDate);
-$todayTime = strtotime($todayDate);
+$days = new \Berezovskiy\Dates\BirthDays($birthDate);
+$totalDays = $days->findTotalDays();
 
-$totalSecs = $todayTime - $birthTime;
-$totalDays = floor($totalSecs / 3600 / 24);
-
-echo PHP_EOL, "$birthDate : $totalDays", PHP_EOL;
-?>
+echo PHP_EOL, " С $birthDate прошло $totalDays дней", PHP_EOL;
