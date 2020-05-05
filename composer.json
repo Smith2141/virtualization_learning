@@ -1,0 +1,18 @@
+{
+  "name": "berezovskiy/dates",
+  "description": "Calculating the number of days from the date of birth",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Maxim Berezovskiy",
+      "email": "berez_max@mail.ru"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Berezovskiy\\": "src"
+    }
+  }
+}

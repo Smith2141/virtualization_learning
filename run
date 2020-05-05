@@ -1,12 +1,12 @@
 #!/usr/bin/env php
 <?php
 
-include './src/Dates/BirthDays.php';
+require_once 'vendor/autoload.php';
 $opts = getopt("b:");
 
 
 echo PHP_EOL, 'start the script', PHP_EOL;
-$birthDate = $opts["b"] ?? '1980-05-04';
+$birthDate = $opts["b"] ?? '1980-09-05';
 
 $days = new \Berezovskiy\Dates\BirthDays($birthDate);
 $totalDays = $days->findTotalDays();
